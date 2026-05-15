@@ -1,0 +1,107 @@
+/* ============================= */
+/*       Customer Testimony      */
+/* ============================= */
+
+.kb-testimonials {
+    background: var(--kb-tertirary-bg);
+}
+
+.kb-testimonials-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 2.75rem;
+}
+
+.kb-testimonials-header {
+    max-width: 640px;
+    margin-bottom: 2rem;
+}
+
+.kb-testimonials-subtitle {
+    margin: 0.25rem 0 0;
+    font-size: var(--kb-font-size-md);
+    color: var(--kb-secondary-font);
+}
+
+.kb-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.kb-testimonial-card {
+    background: var(--kb-tertirary-bg);
+    border-radius: 1rem;
+    padding: 1.25rem 1.3rem 1.1rem;
+    box-shadow: 0 6px 16px var(--kb-overlay-shadow);
+    border: 1px solid var(--kb-header-line);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.kb-testimonial-card::before {
+    content: "“";
+    position: absolute;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--kb-secondary-font);
+    top: -0.6rem;
+    right: 0.9rem;
+    pointer-events: none;
+}
+
+.kb-testimonial-rating {
+    display: flex;
+    gap: 0.15rem;
+    color: var(--kb-button-beige-border);
+    font-size: var(--kb-font-size-md);
+}
+
+.kb-testimonial-text {
+    margin: 0;
+    font-size: var(--kb-font-size-md);
+    color: var(--kb-primary-font);
+    line-height: 1.5;
+}
+
+.kb-testimonial-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: auto;
+}
+
+.kb-testimonial-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: var(--kb-primary-font);
+    color: var(--kb-tertirary-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--kb-font-size-md);
+    font-weight: 600;
+}
+
+.kb-testimonial-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.kb-testimonial-name {
+    font-size: var(--kb-font-size-md);
+    font-weight: 600;
+    color: var(--kb-primary-font);
+}
+
+.kb-testimonial-role {
+    font-size: var(--kb-font-size-xsm);
+    color: var(--kb-secondary-font);
+}
+
+

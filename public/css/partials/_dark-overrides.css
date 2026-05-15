@@ -1,0 +1,356 @@
+/* ═══════════════════════════════════════════════════════
+   dark-mode.css
+   Overrides for elements using hardcoded colors.
+   Load AFTER app.css in your layout.
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Body ── */
+[data-theme="dark"] body,
+[data-theme="dark"] .kb-body {
+    background-color: var(--kb-primary-bg);
+    color: var(--kb-primary-font);
+}
+
+/* ── Logo: invert to white ── */
+[data-theme="dark"] .kb-logo-img, 
+[data-theme="dark"] .kb-footer-logo-img {
+    filter: brightness(0) invert(1);
+}
+
+/* ── Payment SVG icons — lighten in dark mode ── */
+[data-theme="dark"] .kb-footer-payments .kb-icon,
+[data-theme="dark"] .kb-pay-icons .kb-icon,
+[data-theme="dark"] .kb-pay-tab-icons .kb-icon,
+[data-theme="dark"] .kb-payment-icons .kb-icon {
+    filter: brightness(0) invert(0.85);
+}
+
+/* ── Top bar promo ── */
+.kb-promo-code {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    border: 1px dashed rgba(255,255,255,0.35);
+}
+.kb-top-bar-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.kb-top-bar-links a {
+    color: inherit;
+    text-decoration: none;
+    font-size: var(--kb-font-size-sm);
+    transition: opacity 0.15s;
+}
+.kb-top-bar-links a:hover { opacity: 0.7; }
+
+/* ── Search button ── */
+.kb-search-bar button,
+.kb-search-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: none;
+    background: var(--kb-button-beige);
+    color: var(--kb-primary-font);
+    font-size: 1rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s, transform 0.15s;
+}
+.kb-search-bar button:hover,
+.kb-search-submit:hover {
+    background: var(--kb-button-beige-hover);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ── All Categories button (use variables) ── */
+.kb-all-btn { color: var(--kb-primary-font); }
+.kb-all-label { color: var(--kb-primary-font); }
+.kb-hamburger-icon { color: var(--kb-primary-font); }
+
+/* ── Dropdown toggle ── */
+[data-theme="dark"] .kb-dropdown-toggle,
+[data-theme="dark"] .kb-selected-option,
+[data-theme="dark"] .kb-chevron {
+    color: var(--kb-primary-font);
+}
+[data-theme="dark"] .kb-dropdown-menu {
+    background: var(--kb-secondary-bg);
+    border: 1px solid var(--kb-button-border);
+}
+[data-theme="dark"] .kb-dropdown-item { color: var(--kb-primary-font); }
+[data-theme="dark"] .kb-dropdown-item:hover { background: var(--kb-dropdown-hover); }
+
+/* ── Cart icon ── */
+[data-theme="dark"] .kb-cart-icon,
+[data-theme="dark"] .kb-cart-label { color: var(--kb-primary-font); }
+[data-theme="dark"] .kb-cart-btn:hover .kb-cart-icon,
+[data-theme="dark"] .kb-cart-btn:hover .kb-cart-label { color: var(--kb-accent); }
+
+/* ── Cart preview ── */
+[data-theme="dark"] .kb-cart-preview,
+[data-theme="dark"] #cart-preview {
+    background: var(--kb-secondary-bg);
+    border-color: var(--kb-button-border);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+[data-theme="dark"] .cart-preview-header h4,
+[data-theme="dark"] .cart-preview-total strong,
+[data-theme="dark"] #preview-total-price { color: var(--kb-primary-font); }
+[data-theme="dark"] .btn-view-cart { color: var(--kb-primary-font); border-color: var(--kb-button-border); }
+
+/* ── Account ── */
+[data-theme="dark"] .kb-account-icon,
+[data-theme="dark"] .kb-account-greet,
+[data-theme="dark"] .kb-account-action { color: var(--kb-primary-font); }
+[data-theme="dark"] .kb-account-menu {
+    background: var(--kb-secondary-bg);
+    border-color: var(--kb-button-border);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+[data-theme="dark"] .kb-account-menu a { color: var(--kb-primary-font); }
+[data-theme="dark"] .kb-account-menu a:hover { background: var(--kb-dropdown-hover); }
+[data-theme="dark"] .kb-logout-btn { color: var(--kb-primary-font); }
+
+/* ── Nav links ── */
+[data-theme="dark"] .kb-nav-link { color: var(--kb-primary-font); }
+[data-theme="dark"] .kb-nav-link:hover { color: var(--kb-accent); }
+
+/* ── Hero ── */
+[data-theme="dark"] .kb-hero-nav {
+    background: var(--kb-secondary-bg);
+    color: var(--kb-primary-font);
+    border-color: var(--kb-button-border);
+}
+[data-theme="dark"] .kb-hero-dot { background: var(--kb-button-border); }
+[data-theme="dark"] .kb-product-card--hero { background: var(--kb-secondary-bg); }
+
+/* ── New arrivals ── */
+[data-theme="dark"] .kb-new-card-title a { color: var(--kb-primary-font); }
+[data-theme="dark"] .kb-new-icon-btn {
+    background: var(--kb-secondary-bg);
+    border-color: var(--kb-button-border);
+    color: var(--kb-primary-font);
+}
+[data-theme="dark"] .kb-new-icon-btn:hover {
+    background: var(--kb-accent);
+    border-color: var(--kb-accent);
+    color: #fff;
+}
+[data-theme="dark"] .kb-new-add-btn,
+[data-theme="dark"] .add-btn,
+[data-theme="dark"] .kb-product-page-add-btn {
+    border-color: var(--kb-button-border);
+    color: var(--kb-primary-font);
+}
+[data-theme="dark"] .kb-new-add-btn:hover,
+[data-theme="dark"] .add-btn:hover,
+[data-theme="dark"] .kb-product-page-add-btn:hover {
+    background: var(--kb-accent);
+    border-color: var(--kb-accent);
+    color: #fff;
+}
+[data-theme="dark"] .qty-controls {
+    border-color: var(--kb-button-border);
+    background: var(--kb-secondary-bg);
+    color: var(--kb-primary-font);
+}
+[data-theme="dark"] .qty-controls button,
+[data-theme="dark"] .qty-controls .qty { color: var(--kb-secondary-font); font-weight: 800; font-size: var(--kb-font-size-md);}
+
+/* ── Carousel buttons ── */
+[data-theme="dark"] .kb-carousel-btn {
+    background: var(--kb-secondary-bg);
+    border-color: var(--kb-button-border);
+    color: var(--kb-primary-font);
+}
+
+/* ── Wishlist heart (hardcoded white) ── */
+[data-theme="dark"] .kb-wishlist-heart {
+    background: var(--kb-secondary-bg);
+    border-color: var(--kb-button-border);
+    color: var(--kb-secondary-font);
+}
+[data-theme="dark"] .kb-wishlist-heart:hover { background: var(--kb-red-50); }
+[data-theme="dark"] .kb-wishlist-btn {
+    background: var(--kb-secondary-bg);
+    border-color: var(--kb-button-border);
+    color: var(--kb-primary-font);
+}
+[data-theme="dark"] .kb-wishlist-btn.kb-wishlisted { background: var(--kb-red-50); }
+
+/* ── Testimonials ── */
+[data-theme="dark"] .kb-testimonial-card {
+    background: var(--kb-secondary-bg);
+    border-color: var(--kb-button-border);
+}
+[data-theme="dark"] .kb-testimonial-text { color: var(--kb-primary-font); }
+[data-theme="dark"] .kb-testimonial-avatar { background: var(--kb-dropdown-one); }
+[data-theme="dark"] .kb-hero-promise h3 { color: var(--kb-primary-font); }
+[data-theme="dark"] .kb-hero-promise p { color: var(--kb-secondary-font); }
+
+/* ── Forms (hardcoded white) ── */
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .kb-form-input,
+[data-theme="dark"] .kb-auth-input {
+    background: var(--kb-secondary-bg) !important;
+    border-color: var(--kb-button-border) !important;
+    color: var(--kb-primary-font) !important;
+}
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus,
+[data-theme="dark"] .kb-form-input:focus {
+    border-color: var(--kb-accent) !important;
+    box-shadow: 0 0 0 3px rgba(240, 135, 95, 0.2) !important;
+}
+[data-theme="dark"] .form-control::placeholder,
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder { color: var(--kb-secondary-font) !important; }
+[data-theme="dark"] label { color: var(--kb-primary-font); }
+
+/* ── Checkout (hardcoded white) ── */
+[data-theme="dark"] .kb-checkout-address-card-body,
+[data-theme="dark"] .kb-checkout-payment-label {
+    background: var(--kb-secondary-bg);
+    border-color: var(--kb-button-border);
+    color: var(--kb-primary-font);
+}
+[data-theme="dark"] .kb-checkout-address-card-body span { color: var(--kb-secondary-font); }
+[data-theme="dark"] .kb-checkout-simulated-notice {
+    background: var(--kb-green-50);
+    border-color: var(--kb-green-200);
+    color: var(--kb-green-500);
+}
+[data-theme="dark"] .kb-checkout-discount-applied {
+    background: var(--kb-green-50);
+    border-color: var(--kb-green-200);
+}
+[data-theme="dark"] .kb-checkout-discount-info { color: var(--kb-green-500); }
+[data-theme="dark"] .kb-checkout-item-img-placeholder { background: var(--kb-grey-200); }
+
+/* ── Auth card ── */
+[data-theme="dark"] .kb-auth-card {
+    background: var(--kb-secondary-bg);
+    border-color: var(--kb-button-border);
+}
+
+/* ── Contact ── */
+[data-theme="dark"] .contact-wrapper { background: var(--kb-secondary-bg); }
+[data-theme="dark"] .contact-wrapper h1 { color: var(--kb-primary-font); }
+
+/* ── Alerts (Bootstrap) ── */
+[data-theme="dark"] .alert-danger {
+    background: var(--kb-red-50);
+    color: var(--kb-red-500);
+    border-color: var(--kb-red-100);
+}
+[data-theme="dark"] .alert-success {
+    background: var(--kb-green-50);
+    color: var(--kb-green-500);
+    border-color: var(--kb-green-100);
+}
+
+/* ── Review / Wishlist cards ── */
+[data-theme="dark"] .kb-review-card,
+[data-theme="dark"] .kb-review-form-card,
+[data-theme="dark"] .kb-reviews-overview,
+[data-theme="dark"] .kb-wishlist-item-card {
+    background: var(--kb-secondary-bg);
+    border-color: var(--kb-button-border);
+}
+[data-theme="dark"] .kb-review-already {
+    background: var(--kb-green-50);
+    border-color: var(--kb-green-200);
+    color: var(--kb-green-500);
+}
+[data-theme="dark"] .kb-wishlist-remove-btn {
+    background: var(--kb-secondary-bg);
+    border-color: var(--kb-button-border);
+}
+[data-theme="dark"] .kb-reviews-bar-track { background: var(--kb-grey-200); }
+[data-theme="dark"] .kb-related-card { background: var(--kb-secondary-bg); border-color: var(--kb-button-border); }
+
+/* ── Error pages ── */
+[data-theme="dark"] .kb-error-btn-outline {
+    border-color: var(--kb-button-border);
+    color: var(--kb-primary-font);
+}
+
+/* ── Chatbot ── */
+[data-theme="dark"] .kb-chat-window {
+    background: var(--kb-secondary-bg);
+    border-color: var(--kb-button-border);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+[data-theme="dark"] .kb-chat-messages {
+    background: var(--kb-secondary-bg);
+}
+[data-theme="dark"] .kb-chat-bubble-bot {
+    background: var(--kb-primary-bg);
+    color: var(--kb-primary-font);
+    border-color: var(--kb-button-border);
+}
+[data-theme="dark"] .kb-chat-bubble-user {
+    background: var(--kb-accent);
+    color: #fff;
+}
+[data-theme="dark"] .kb-chat-links {
+    border-top-color: var(--kb-button-border);
+}
+[data-theme="dark"] .kb-chat-link,
+[data-theme="dark"] .kb-chat-inline-link {
+    color: var(--kb-accent);
+}
+[data-theme="dark"] .kb-chat-input-area {
+    border-top-color: var(--kb-button-border);
+    background: var(--kb-secondary-bg);
+}
+[data-theme="dark"] .kb-chat-input {
+    background: var(--kb-primary-bg);
+    border-color: var(--kb-button-border);
+    color: var(--kb-primary-font);
+}
+[data-theme="dark"] .kb-chat-input::placeholder {
+    color: var(--kb-secondary-font);
+}
+[data-theme="dark"] .kb-chat-quick-replies {
+    background: var(--kb-secondary-bg);
+}
+[data-theme="dark"] .kb-chat-quick-btn {
+    color: var(--kb-accent);
+    border-color: var(--kb-accent);
+    background: transparent;
+}
+[data-theme="dark"] .kb-chat-quick-btn:hover {
+    background: var(--kb-accent);
+    color: #fff;
+}
+[data-theme="dark"] .kb-chat-header-close {
+    color: rgba(255,255,255,0.7);
+}
+[data-theme="dark"] .kb-chat-typing span {
+    background: var(--kb-secondary-font);
+}
+
+/* ── Footer ── */
+[data-theme="dark"] footer,
+[data-theme="dark"] .kb-footer {
+    background: var(--kb-grey-50);
+    border-top-color: var(--kb-button-border);
+}
+
+/* ── Scrollbar ── */
+[data-theme="dark"] ::-webkit-scrollbar-track { background: var(--kb-primary-bg); }
+[data-theme="dark"] ::-webkit-scrollbar-thumb { background: var(--kb-button-border); }

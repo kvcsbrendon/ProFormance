@@ -1,0 +1,86 @@
+/* ===================================================================
+   Auth Pages CSS (login, register, email-check)
+   =================================================================== */
+
+.kb-auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 70vh;
+    padding: 3rem 1rem;
+}
+.kb-auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--kb-card-bg);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 12px;
+    padding: 2rem;
+}
+.kb-auth-card-wide { max-width: 540px; }
+
+.kb-auth-header { text-align: center; margin-bottom: 1.5rem; }
+.kb-auth-title { font-size: 1.5rem; font-weight: 700; margin: 0 0 0.3rem; color: var(--kb-primary-font); }
+.kb-auth-subtitle { font-size: var(--kb-font-size-sm); color: var(--kb-secondary-font); margin: 0; }
+
+.kb-auth-field { margin-bottom: 1rem; }
+.kb-auth-label { display: block; font-size: var(--kb-font-size-sm); font-weight: 600; margin-bottom: 0.3rem; color: var(--kb-primary-font); }
+.kb-auth-label-row { display: flex; justify-content: space-between; align-items: baseline; }
+.kb-auth-optional { font-weight: 400; color: var(--kb-secondary-font); }
+.kb-auth-input {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--kb-button-border);
+    border-radius: 8px;
+    font-size: var(--kb-font-size-sm);
+    background: var(--kb-background);
+    color: var(--kb-primary-font);
+    transition: border-color 0.15s;
+    box-sizing: border-box;
+}
+.kb-auth-input:focus { border-color: var(--kb-accent); outline: none; }
+.kb-auth-error { display: block; font-size: 12px; color: var(--kb-red-500); margin-top: 0.25rem; }
+
+.kb-auth-row {
+    display: flex;
+    gap: 0.75rem;
+}
+.kb-auth-row .kb-auth-field { flex: 1; }
+
+.kb-auth-btn {
+    width: 100%;
+    padding: 0.7rem;
+    background: var(--kb-accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--kb-font-size-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+    margin-top: 0.5rem;
+}
+.kb-auth-btn:hover { background: var(--kb-accent-hover); }
+
+.kb-auth-link {
+    color: var(--kb-accent);
+    text-decoration: none;
+    font-size: var(--kb-font-size-sm);
+    font-weight: 500;
+}
+.kb-auth-link:hover { text-decoration: underline; }
+
+.kb-auth-footer {
+    text-align: center;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--kb-button-border);
+    font-size: var(--kb-font-size-sm);
+    color: var(--kb-secondary-font);
+}
+.kb-auth-footer a { margin-left: 0.3rem; }
+
+@media (max-width: 480px) {
+    .kb-auth-row { flex-direction: column; gap: 0; }
+    .kb-auth-card { padding: 1.25rem; }
+}

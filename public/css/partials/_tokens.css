@@ -1,0 +1,122 @@
+/* ===================================================================
+   ProFormance — Design Tokens & Variables
+   =================================================================== */
+
+:root {
+    /* ── Typography ── */
+    --kb-font-family: 'Poppins', 'Lato', sans-serif;
+
+    --kb-font-size-xsm: 0.75rem;
+    --kb-font-size-sm: 0.875rem;
+    --kb-font-size-sm-fluid: clamp(0.875rem, 1.5vw, 1rem);
+    --kb-font-size-md: 1rem;
+    --kb-font-size-md-fluid: clamp(1rem, 1.8vw, 1.125rem);
+    --kb-font-size-lg: 1.125rem;
+    --kb-font-size-lg-fluid: clamp(1.125rem, 2vw, 1.25rem);
+    --kb-font-size-xl: 1.25rem;
+    --kb-font-size-xl-fluid: clamp(1.25rem, 2.2vw, 1.5rem);
+    --kb-font-size-2xl: 1.5rem;
+    --kb-font-size-2xl-fluid: clamp(1.5rem, 3vw, 2rem);
+    --kb-font-size-3xl: 2rem;
+    --kb-font-size-3xl-fluid: clamp(2rem, 3.5vw, 2.5rem);
+    --kb-font-size-4xl: 2.5rem;
+    --kb-font-size-4xl-fluid: clamp(2.5rem, 4vw, 3rem);
+    --kb-font-size-5xl: 3rem;
+    --kb-font-size-5xl-fluid: clamp(3rem, 5vw, 3.75rem);
+    --kb-font-size-xxl-fluid: clamp(1.2rem, 1.9vw, 3.1rem);
+
+    /* ── Core Palette ── */
+    --kb-white: #ffffff;
+    --kb-white-warm: #fffdf9;
+    --kb-black: #000000;
+
+    /* ── Neutral Greys ── */
+    --kb-grey-50: #f9fafb;
+    --kb-grey-100: #f3f4f6;
+    --kb-grey-200: #e5e7eb;
+    --kb-grey-300: #d1d5db;
+    --kb-grey-400: #9ca3af;
+    --kb-grey-500: #6b7280;
+    --kb-grey-600: #4b5563;
+    --kb-grey-700: #374151;
+    --kb-grey-800: #1f2937;
+    --kb-grey-900: #111827;
+
+    /* ── Red (Error / Danger / Sale) ── */
+    --kb-red-50: #fef2f2;
+    --kb-red-100: #fee2e2;
+    --kb-red-300: #fca5a5;
+    --kb-red-500: #ef4444;
+    --kb-red-600: #dc2626;
+    --kb-red-700: #b91c1c;
+    --kb-red-800: #991b1b;
+
+    /* ── Green (Success) ── */
+    --kb-green-50: #f0fdf4;
+    --kb-green-100: #d1fae5;
+    --kb-green-200: #a7f3d0;
+    --kb-green-500: #10b981;
+    --kb-green-600: #16a34a;
+    --kb-green-700: #166534;
+    --kb-green-800: #065f46;
+
+    /* ── Blue (Info / Links) ── */
+    --kb-blue-50: #eff6ff;
+    --kb-blue-100: #dbeafe;
+    --kb-blue-200: #bfdbfe;
+    --kb-blue-300: #93c5fd;
+    --kb-blue-500: #3b82f6;
+    --kb-blue-600: #2563eb;
+    --kb-blue-800: #1e40af;
+
+    /* ── Amber (Warning / Stars / Gift) ── */
+    --kb-amber-100: #fef3c7;
+    --kb-amber-200: #fde68a;
+    --kb-amber-400: #fbbf24;
+    --kb-amber-500: #f59e0b;
+    --kb-amber-600: #d97706;
+    --kb-amber-700: #b45309;
+    --kb-amber-800: #92400e;
+    --kb-amber-900: #78350f;
+
+    /* ── Purple ── */
+    --kb-purple-100: #ede9fe;
+    --kb-purple-700: #6d28d9;
+
+    /* ── Shadows & Overlays ── */
+    --kb-shadow-xs: rgba(0, 0, 0, 0.08);
+    --kb-shadow-sm: rgba(0, 0, 0, 0.12);
+    --kb-shadow-md: rgba(0, 0, 0, 0.15);
+    --kb-shadow-lg: rgba(0, 0, 0, 0.2);
+    --kb-shadow-xl: rgba(0, 0, 0, 0.4);
+    --kb-shadow-2xl: rgba(0, 0, 0, 0.55);
+    --kb-overlay-bg: rgba(0, 0, 0, 0.5);
+    --kb-beige-glow: rgba(254, 200, 154, 0.3);
+    --kb-red-glow-xs: rgba(220, 38, 38, 0.08);
+    --kb-red-glow-sm: rgba(220, 38, 38, 0.1);
+    --kb-red-glow-md: rgba(220, 38, 38, 0.2);
+    --kb-blue-glow: rgba(59, 130, 246, 0.1);
+
+    /* ── Theme Colours (Light Mode) ── */
+    --kb-primary-bg: #F4F3F2;
+    --kb-secondary-bg: #f4e6d9;
+    --kb-tertirary-bg: #fafeff;
+    --kb-primary-btn: #EBE6E6;
+    --kb-dropdown-one: #e6e6e6;
+    --kb-dropdown-two: #F4F3F2;
+    --kb-dropdown-hover: #fafeff;
+    --kb-primary-font: #111827;
+    --kb-secondary-font: #9ca3af;
+    --kb-tertirary-font: #fafeff;
+    --kb-header-line: #e5e7eb;
+    --kb-accent: #EB7347;
+    --kb-button-border: #ccc;
+    --kb-button-beige: #fec89A;
+    --kb-button-beige-border: #ffa85D;
+    --kb-button-beige-hover: #EB7347;
+    --kb-sale-red: #dc2626;
+    --kb-box-shadow: rgba(0, 0, 0, 0.15);
+    --kb-overlay-shadow: rgba(0, 0, 0, 0.4);
+}
+
+

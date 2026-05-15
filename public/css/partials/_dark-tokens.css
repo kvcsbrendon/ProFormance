@@ -1,0 +1,181 @@
+/* ===================================================================
+   Dark Mode
+   =================================================================== */
+
+[data-theme="dark"] {
+    /* ── Core Palette (inverted) ── */
+    --kb-white: #1a1a2e;
+    --kb-white-warm: #1e1e32;
+    --kb-black: #f0f0f0;
+
+    /* ── Neutral Greys (inverted) ── */
+    --kb-grey-50: #1e1e2e;
+    --kb-grey-100: #252538;
+    --kb-grey-200: #2d2d42;
+    --kb-grey-300: #3d3d55;
+    --kb-grey-400: #6b7280;
+    --kb-grey-500: #9ca3af;
+    --kb-grey-600: #c0c5ce;
+    --kb-grey-700: #d1d5db;
+    --kb-grey-800: #e5e7eb;
+    --kb-grey-900: #f3f4f6;
+
+    /* ── Red (slightly muted for dark bg) ── */
+    --kb-red-50: #2a1215;
+    --kb-red-100: #3b1a1e;
+    --kb-red-300: #9b3a3a;
+    --kb-red-500: #f87171;
+    --kb-red-600: #ef4444;
+    --kb-red-700: #dc2626;
+    --kb-red-800: #fca5a5;
+
+    /* ── Green ── */
+    --kb-green-50: #0f2418;
+    --kb-green-100: #132e1c;
+    --kb-green-200: #1a4028;
+    --kb-green-500: #34d399;
+    --kb-green-600: #22c55e;
+    --kb-green-700: #86efac;
+    --kb-green-800: #bbf7d0;
+
+    /* ── Blue ── */
+    --kb-blue-50: #111827;
+    --kb-blue-100: #1e2a45;
+    --kb-blue-200: #2a3d62;
+    --kb-blue-300: #60a5fa;
+    --kb-blue-500: #60a5fa;
+    --kb-blue-600: #93c5fd;
+    --kb-blue-800: #bfdbfe;
+
+    /* ── Amber ── */
+    --kb-amber-100: #2a2010;
+    --kb-amber-200: #3d2e12;
+    --kb-amber-400: #f59e0b;
+    --kb-amber-500: #fbbf24;
+    --kb-amber-600: #f59e0b;
+    --kb-amber-700: #fbbf24;
+    --kb-amber-800: #fde68a;
+    --kb-amber-900: #fef3c7;
+
+    /* ── Purple ── */
+    --kb-purple-100: #1e1636;
+    --kb-purple-700: #a78bfa;
+
+    /* ── Shadows (stronger for dark) ── */
+    --kb-shadow-xs: rgba(0, 0, 0, 0.2);
+    --kb-shadow-sm: rgba(0, 0, 0, 0.3);
+    --kb-shadow-md: rgba(0, 0, 0, 0.35);
+    --kb-shadow-lg: rgba(0, 0, 0, 0.4);
+    --kb-shadow-xl: rgba(0, 0, 0, 0.6);
+    --kb-shadow-2xl: rgba(0, 0, 0, 0.75);
+    --kb-overlay-bg: rgba(0, 0, 0, 0.7);
+    --kb-beige-glow: rgba(254, 200, 154, 0.15);
+    --kb-red-glow-xs: rgba(248, 113, 113, 0.1);
+    --kb-red-glow-sm: rgba(248, 113, 113, 0.15);
+    --kb-red-glow-md: rgba(248, 113, 113, 0.25);
+    --kb-blue-glow: rgba(96, 165, 250, 0.15);
+
+    /* ── Theme Colours (Dark Mode) ── */
+    --kb-primary-bg: #16162a;
+    --kb-secondary-bg: #1e1e35;
+    --kb-tertirary-bg: #1a1a2e;
+    --kb-primary-btn: #2a2a42;
+    --kb-dropdown-one: #22223a;
+    --kb-dropdown-two: #1e1e32;
+    --kb-dropdown-hover: #2d2d48;
+    --kb-primary-font: #e8e6e3;
+    --kb-secondary-font: #8b8fa3;
+    --kb-tertirary-font: #e8e6e3;
+    --kb-header-line: #2d2d42;
+    --kb-accent: #f0875f;
+    --kb-button-border: #3d3d55;
+    --kb-button-beige: #c8843e;
+    --kb-button-beige-border: #d4914a;
+    --kb-button-beige-hover: #e07a3a;
+    --kb-sale-red: #f87171;
+    --kb-box-shadow: rgba(0, 0, 0, 0.4);
+    --kb-overlay-shadow: rgba(0, 0, 0, 0.6);
+}
+
+/* Respect OS preference */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        /* Same as [data-theme="dark"] above */
+        --kb-white: #1a1a2e;
+        --kb-white-warm: #1e1e32;
+        --kb-black: #f0f0f0;
+        --kb-grey-50: #1e1e2e;
+        --kb-grey-100: #252538;
+        --kb-grey-200: #2d2d42;
+        --kb-grey-300: #3d3d55;
+        --kb-grey-400: #6b7280;
+        --kb-grey-500: #9ca3af;
+        --kb-grey-600: #c0c5ce;
+        --kb-grey-700: #d1d5db;
+        --kb-grey-800: #e5e7eb;
+        --kb-grey-900: #f3f4f6;
+        --kb-red-50: #2a1215;
+        --kb-red-100: #3b1a1e;
+        --kb-red-300: #9b3a3a;
+        --kb-red-500: #f87171;
+        --kb-red-600: #ef4444;
+        --kb-red-700: #dc2626;
+        --kb-red-800: #fca5a5;
+        --kb-green-50: #0f2418;
+        --kb-green-100: #132e1c;
+        --kb-green-200: #1a4028;
+        --kb-green-500: #34d399;
+        --kb-green-600: #22c55e;
+        --kb-green-700: #86efac;
+        --kb-green-800: #bbf7d0;
+        --kb-blue-50: #111827;
+        --kb-blue-100: #1e2a45;
+        --kb-blue-200: #2a3d62;
+        --kb-blue-300: #60a5fa;
+        --kb-blue-500: #60a5fa;
+        --kb-blue-600: #93c5fd;
+        --kb-blue-800: #bfdbfe;
+        --kb-amber-100: #2a2010;
+        --kb-amber-200: #3d2e12;
+        --kb-amber-400: #f59e0b;
+        --kb-amber-500: #fbbf24;
+        --kb-amber-600: #f59e0b;
+        --kb-amber-700: #fbbf24;
+        --kb-amber-800: #fde68a;
+        --kb-amber-900: #fef3c7;
+        --kb-purple-100: #1e1636;
+        --kb-purple-700: #a78bfa;
+        --kb-shadow-xs: rgba(0, 0, 0, 0.2);
+        --kb-shadow-sm: rgba(0, 0, 0, 0.3);
+        --kb-shadow-md: rgba(0, 0, 0, 0.35);
+        --kb-shadow-lg: rgba(0, 0, 0, 0.4);
+        --kb-shadow-xl: rgba(0, 0, 0, 0.6);
+        --kb-shadow-2xl: rgba(0, 0, 0, 0.75);
+        --kb-overlay-bg: rgba(0, 0, 0, 0.7);
+        --kb-beige-glow: rgba(254, 200, 154, 0.15);
+        --kb-red-glow-xs: rgba(248, 113, 113, 0.1);
+        --kb-red-glow-sm: rgba(248, 113, 113, 0.15);
+        --kb-red-glow-md: rgba(248, 113, 113, 0.25);
+        --kb-blue-glow: rgba(96, 165, 250, 0.15);
+        --kb-primary-bg: #16162a;
+        --kb-secondary-bg: #1e1e35;
+        --kb-tertirary-bg: #1a1a2e;
+        --kb-primary-btn: #2a2a42;
+        --kb-dropdown-one: #22223a;
+        --kb-dropdown-two: #1e1e32;
+        --kb-dropdown-hover: #2d2d48;
+        --kb-primary-font: #e8e6e3;
+        --kb-secondary-font: #8b8fa3;
+        --kb-tertirary-font: #e8e6e3;
+        --kb-header-line: #2d2d42;
+        --kb-accent: #f0875f;
+        --kb-button-border: #3d3d55;
+        --kb-button-beige: #c8843e;
+        --kb-button-beige-border: #d4914a;
+        --kb-button-beige-hover: #e07a3a;
+        --kb-sale-red: #f87171;
+        --kb-box-shadow: rgba(0, 0, 0, 0.4);
+        --kb-overlay-shadow: rgba(0, 0, 0, 0.6);
+    }
+}
+

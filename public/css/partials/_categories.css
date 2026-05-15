@@ -1,0 +1,99 @@
+/* ============================= */
+/*       Category Cards Styles   */
+/* ============================= */
+
+.kb-category-section {
+    background: var(--kb-primary-bg);
+}
+
+.kb-category-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 2.75rem;
+}
+
+.kb-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6.5rem;
+}
+
+.kb-category-card {
+    display: block;
+    border-radius: 1rem;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 4px 15px var(--kb-overlay-shadow);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.kb-category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px var(--kb-box-shadow);
+}
+
+.kb-category-media {
+    position: relative;
+    width: 100%;
+    height: 325px;
+    overflow: hidden;
+}
+
+.kb-category-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .4s ease;
+}
+
+.kb-category-card:hover .kb-category-media img {
+    transform: scale(1.07);
+}
+
+.kb-category-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        var(--kb-shadow-2xl) 0%,
+        var(--kb-shadow-lg) 40%,
+        rgba(0,0,0,0) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.1rem;
+    color: var(--kb-white);
+}
+
+.kb-category-name {
+    font-size: var(--kb-font-size-xl);
+    font-weight: 900;
+    margin-bottom: 0.15rem;
+	color: var(--kb-primary-font);
+}
+
+.kb-category-cta {
+    font-size: var(--kb-font-size-sm);
+	color: var(--kb-primary-font);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.95;
+}
+
+.kb-category-name-pic {
+    font-size: var(--kb-font-size-xl);
+    font-weight: 900;
+    margin-bottom: 0.15rem;
+	color: var(--kb-tertirary-font);
+}
+
+.kb-category-cta-pic {
+    font-size: var(--kb-font-size-sm);
+	color: var(--kb-tertirary-font);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.9;
+}
+

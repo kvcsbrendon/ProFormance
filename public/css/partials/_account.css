@@ -1,0 +1,793 @@
+/* ============================= */
+/*      Account Management       */
+/* ============================= */
+
+/* ---- Page Layout ---- */
+.kb-account-page {
+    padding: 2rem 3.75rem;
+    min-height: 60vh;
+}
+
+.kb-account-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ---- Sidebar ---- */
+.kb-account-sidebar {
+    background: var(--kb-primary-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+    border: 1px solid var(--kb-button-border);
+}
+
+.kb-account-sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--kb-button-border);
+    margin-bottom: 1rem;
+}
+
+.kb-account-sidebar-avatar {
+    font-size: 2.5rem;
+    color: var(--kb-primary-font);
+}
+
+.kb-account-sidebar-user {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.kb-account-sidebar-name {
+    font-weight: 600;
+    font-size: var(--kb-font-size-md);
+    color: var(--kb-primary-font);
+}
+
+.kb-account-sidebar-email {
+    font-size: var(--kb-font-size-xsm);
+    color: var(--kb-secondary-font);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ---- Nav Items ---- */
+.kb-account-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.kb-account-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--kb-primary-font);
+    font-size: var(--kb-font-size-sm);
+    font-weight: 500;
+    transition: background-color 0.15s, color 0.15s;
+    cursor: pointer;
+}
+
+.kb-account-nav-item:hover {
+    background: var(--kb-dropdown-hover);
+}
+
+.kb-account-nav-item.active {
+    background: var(--kb-button-beige);
+    color: var(--kb-primary-font);
+    font-weight: 600;
+}
+
+.kb-account-nav-item i {
+    font-size: 1.15rem;
+    width: 20px;
+    text-align: center;
+}
+
+.kb-account-nav-divider {
+    height: 1px;
+    background: var(--kb-button-border);
+    margin: 0.5rem 0;
+}
+
+.kb-account-logout-btn {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-family: var(--kb-font-family);
+    color: var(--kb-sale-red);
+}
+
+.kb-account-logout-btn:hover {
+    background: var(--kb-red-50);
+}
+
+/* ---- Content Area ---- */
+.kb-account-content {
+    min-width: 0;
+}
+
+/* ---- Headings ---- */
+.kb-account-title {
+    font-size: var(--kb-font-size-2xl-fluid);
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+    color: var(--kb-primary-font);
+}
+
+.kb-account-subtitle {
+    font-size: var(--kb-font-size-sm);
+    color: var(--kb-secondary-font);
+    margin: 0 0 1.5rem;
+}
+
+.kb-account-section {
+    margin-bottom: 1.5rem;
+}
+
+.kb-account-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.kb-account-section-title {
+    font-size: var(--kb-font-size-xl);
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ---- Stat Cards ---- */
+.kb-account-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.kb-account-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--kb-primary-bg);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-decoration: none;
+    color: var(--kb-primary-font);
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.kb-account-stat-card:hover {
+    box-shadow: 0 4px 12px var(--kb-box-shadow);
+    border-color: var(--kb-button-beige-border);
+}
+
+.kb-stat-icon {
+    font-size: 1.75rem;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--kb-button-beige);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.kb-stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.kb-stat-number {
+    font-size: var(--kb-font-size-xl);
+    font-weight: 700;
+}
+
+.kb-stat-label {
+    font-size: var(--kb-font-size-xsm);
+    color: var(--kb-secondary-font);
+}
+
+/* ---- Cards ---- */
+.kb-account-card {
+    background: var(--kb-primary-bg);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.kb-account-card-title {
+    font-size: var(--kb-font-size-lg);
+    font-weight: 600;
+    margin: 0 0 1rem;
+}
+
+.kb-account-card-danger {
+    border-color: var(--kb-red-300);
+    background: var(--kb-red-50);
+}
+
+/* ---- Tables ---- */
+.kb-account-table-wrapper {
+    overflow-x: auto;
+}
+
+.kb-account-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--kb-font-size-sm);
+}
+
+.kb-account-table th {
+    text-align: left;
+    padding: 0.75rem;
+    border-bottom: 2px solid var(--kb-button-border);
+    font-weight: 600;
+    color: var(--kb-secondary-font);
+    font-size: var(--kb-font-size-xsm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.kb-account-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--kb-grey-200);
+    vertical-align: middle;
+}
+
+.kb-account-table tbody tr:hover {
+    background: var(--kb-dropdown-hover);
+}
+
+/* ---- Order Status Badges ---- */
+.kb-order-status {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: var(--kb-font-size-xsm);
+    font-weight: 600;
+}
+
+.kb-order-status-pending {
+    background: var(--kb-amber-100);
+    color: var(--kb-amber-800);
+}
+
+.kb-order-status-paid {
+    background: var(--kb-green-100);
+    color: var(--kb-green-800);
+}
+
+.kb-order-status-fulfilled {
+    background: var(--kb-blue-100);
+    color: var(--kb-blue-800);
+}
+
+.kb-order-status-cancelled {
+    background: var(--kb-red-100);
+    color: var(--kb-red-800);
+}
+
+.kb-order-status-refunded {
+    background: var(--kb-grey-200);
+    color: var(--kb-grey-700);
+}
+
+/* ---- Filter Tags ---- */
+.kb-account-filters {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.kb-filter-tag {
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: var(--kb-font-size-sm);
+    text-decoration: none;
+    color: var(--kb-primary-font);
+    background: var(--kb-primary-bg);
+    border: 1px solid var(--kb-button-border);
+    transition: all 0.15s;
+}
+
+.kb-filter-tag:hover {
+    border-color: var(--kb-button-beige-border);
+}
+
+.kb-filter-tag.active {
+    background: var(--kb-button-beige);
+    border-color: var(--kb-button-beige-border);
+    font-weight: 600;
+}
+
+/* ---- Buttons ---- */
+.kb-account-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    justify-content: center;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    font-size: var(--kb-font-size-sm);
+    font-weight: 600;
+    font-family: var(--kb-font-family);
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    transition: all 0.15s;
+}
+
+.kb-account-btn-primary {
+    background: var(--kb-button-beige);
+    color: var(--kb-primary-font);
+    border: 1px solid var(--kb-button-beige-border);
+}
+
+.kb-account-btn-primary:hover {
+    background: var(--kb-button-beige-hover);
+    color: var(--kb-tertirary-font);
+}
+
+.kb-account-btn-outline {
+    background: transparent;
+    color: var(--kb-primary-font);
+    border: 1px solid var(--kb-button-border);
+}
+
+.kb-account-btn-outline:hover {
+    background: var(--kb-primary-bg);
+}
+
+.kb-account-btn-small {
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.85rem;
+    font-size: var(--kb-font-size-xsm);
+    background: var(--kb-primary-bg);
+    border: 1px solid var(--kb-button-border);
+    color: var(--kb-primary-font);
+}
+
+.kb-account-btn-small:hover {
+    border-color: var(--kb-button-beige-border);
+}
+
+.kb-account-btn-danger {
+    background: var(--kb-sale-red);
+    color: var(--kb-white);
+    border: 1px solid var(--kb-sale-red);
+}
+
+.kb-account-btn-danger:hover {
+    background: var(--kb-red-700);
+}
+
+.kb-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 6px;
+    color: var(--kb-secondary-font);
+    transition: all 0.15s;
+    font-size: 1rem;
+}
+
+.kb-icon-btn:hover {
+    background: var(--kb-dropdown-hover);
+    color: var(--kb-primary-font);
+}
+
+.kb-icon-btn-danger:hover {
+    background: var(--kb-red-100);
+    color: var(--kb-sale-red);
+}
+
+/* ---- Links ---- */
+.kb-account-link {
+    color: var(--kb-button-beige-hover);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--kb-font-size-sm);
+}
+
+.kb-account-link:hover {
+    text-decoration: underline;
+}
+
+.kb-account-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--kb-secondary-font);
+    text-decoration: none;
+    font-size: var(--kb-font-size-sm);
+    margin-bottom: 0.75rem;
+}
+
+.kb-account-back-link:hover {
+    color: var(--kb-primary-font);
+}
+
+/* ---- Empty States ---- */
+.kb-account-empty {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: var(--kb-primary-bg);
+    border: 1px dashed var(--kb-button-border);
+    border-radius: 12px;
+}
+
+.kb-account-empty i {
+    font-size: 3rem;
+    color: var(--kb-secondary-font);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.kb-account-empty p {
+    color: var(--kb-secondary-font);
+    margin-bottom: 1rem;
+}
+
+/* ---- Forms ---- */
+.kb-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.kb-form-group {
+    margin-bottom: 1rem;
+}
+
+.kb-form-group-small {
+    max-width: 120px;
+}
+
+.kb-form-label {
+    display: block;
+    font-size: var(--kb-font-size-sm);
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: var(--kb-primary-font);
+}
+
+.kb-form-optional {
+    font-weight: 400;
+    color: var(--kb-secondary-font);
+}
+
+.kb-form-input {
+    width: 100%;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid var(--kb-button-border);
+    border-radius: 8px;
+    font-size: var(--kb-font-size-sm);
+    font-family: var(--kb-font-family);
+    color: var(--kb-primary-font);
+    background: var(--kb-white);
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.kb-form-input:focus {
+    outline: none;
+    border-color: var(--kb-button-beige-border);
+    box-shadow: 0 0 0 3px var(--kb-beige-glow);
+}
+
+.kb-form-input-disabled {
+    background: var(--kb-grey-100);
+    color: var(--kb-secondary-font);
+    cursor: not-allowed;
+}
+
+.kb-form-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.kb-form-hint {
+    font-size: var(--kb-font-size-xsm);
+    color: var(--kb-secondary-font);
+    margin-top: 0.35rem;
+}
+
+.kb-form-hint a {
+    color: var(--kb-button-beige-hover);
+}
+
+.kb-form-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.kb-form-checkboxes {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.kb-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--kb-font-size-sm);
+    cursor: pointer;
+}
+
+.kb-checkbox-label input[type="checkbox"] {
+    accent-color: var(--kb-button-beige-hover);
+    width: 16px;
+    height: 16px;
+}
+
+/* ---- Alerts ---- */
+.kb-account-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    font-size: var(--kb-font-size-sm);
+    margin-bottom: 1.25rem;
+}
+
+.kb-account-alert ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.kb-account-alert-success {
+    background: var(--kb-green-100);
+    color: var(--kb-green-800);
+    border: 1px solid var(--kb-green-200);
+}
+
+.kb-account-alert-error {
+    background: var(--kb-red-100);
+    color: var(--kb-red-800);
+    border: 1px solid var(--kb-red-300);
+}
+
+/* ---- Badges ---- */
+.kb-badge {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: var(--kb-font-size-xsm);
+    font-weight: 600;
+}
+
+.kb-badge-shipping {
+    background: var(--kb-blue-100);
+    color: var(--kb-blue-800);
+}
+
+.kb-badge-billing {
+    background: var(--kb-purple-100);
+    color: var(--kb-purple-700);
+}
+
+.kb-badge-pending {
+    background: var(--kb-amber-100);
+    color: var(--kb-amber-800);
+}
+
+/* ---- Address Grid ---- */
+.kb-account-address-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1rem;
+}
+
+.kb-address-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.kb-address-badges {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.kb-address-card-actions {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.kb-address-display p {
+    margin: 0.15rem 0;
+    font-size: var(--kb-font-size-sm);
+    color: var(--kb-primary-font);
+}
+
+.kb-address-edit-form {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--kb-button-border);
+}
+
+/* ---- Order Detail ---- */
+.kb-account-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.kb-order-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.kb-summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--kb-font-size-sm);
+}
+
+.kb-summary-discount {
+    color: var(--kb-green-600);
+}
+
+.kb-summary-total {
+    padding-top: 0.75rem;
+    border-top: 2px solid var(--kb-button-border);
+    font-size: var(--kb-font-size-md);
+}
+
+/* ---- Reviews ---- */
+.kb-account-reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.kb-review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.kb-review-product-name {
+    font-weight: 600;
+    color: var(--kb-primary-font);
+    text-decoration: none;
+    font-size: var(--kb-font-size-md);
+}
+
+.kb-review-product-name:hover {
+    text-decoration: underline;
+}
+
+.kb-review-stars {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    margin-top: 0.25rem;
+    color: var(--kb-button-beige-hover);
+    font-size: var(--kb-font-size-sm);
+}
+
+.kb-review-date {
+    margin-left: 0.5rem;
+    color: var(--kb-secondary-font);
+    font-size: var(--kb-font-size-xsm);
+}
+
+.kb-review-actions {
+    display: flex;
+    gap: 0.25rem;
+    border-top: 1px dashed var(--kb-secondary-font);
+}
+
+.kb-review-title {
+    font-size: var(--kb-font-size-md);
+    font-weight: 600;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.kb-review-body {
+    font-size: var(--kb-font-size-sm);
+    color: var(--kb-primary-font);
+    margin: 0.25rem 0 0.5rem;
+    line-height: 1.5;
+}
+
+.kb-review-edit-form {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--kb-button-border);
+}
+/* ---- Newsletter ---- */
+.kb-newsletter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--kb-grey-50);
+    padding: 14px 16px;
+    border-radius: 8px;
+}
+
+.kb-newsletter-status {
+    font-size: 0.95rem;
+}
+
+.kb-newsletter-status-on {
+    color: var(--kb-green-500);
+    font-weight: 600;
+}
+
+.kb-newsletter-status-off {
+    color: var(--kb-grey-500);
+}
+
+.kb-newsletter-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.kb-newsletter-btn-primary {
+    background: var(--kb-grey-900);
+    color: var(--kb-white);
+}
+
+.kb-newsletter-btn-outline {
+    background: transparent;
+    border: 1px solid var(--kb-red-600);
+    color: var(--kb-red-600);
+}
+
+.kb-newsletter-btn-outline:hover {
+    background: var(--kb-red-600);
+    color: var(--kb-white);
+}
+
+
+/* ---- Pagination ---- */
+.kb-account-pagination {
+    margin-top: 1.5rem;
+}
+
+.kb-account-pagination nav {
+    display: flex;
+    justify-content: center;
+}
+
+/* ---- Responsive ---- */
+
+.kb-admin-reply-account {
+background: var( --kb-primary-bg);
+color: var(--kb-primary-font);
+}

@@ -1,0 +1,151 @@
+/* ── Account: Saved cards grid ── */
+.kb-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.kb-saved-card {
+    background: var(--kb-card-bg);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.kb-saved-card-expired { opacity: 0.6; }
+.kb-saved-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.kb-saved-card-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    font-size: var(--kb-font-size-sm);
+}
+.kb-saved-card-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: var(--kb-accent);
+    color: #fff;
+}
+.kb-saved-card-badge-expired { background: var(--kb-red-500); }
+.kb-saved-card-number {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: monospace;
+}
+.kb-saved-card-details {
+    display: flex;
+    gap: 1.5rem;
+    font-size: var(--kb-font-size-sm);
+}
+.kb-saved-card-details > div { display: flex; flex-direction: column; }
+.kb-saved-card-label { font-size: 11px; color: var(--kb-secondary-font); text-transform: uppercase; }
+.kb-saved-card-actions {
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--kb-button-border);
+}
+
+/* ── Checkout: Saved card selector ── */
+.kb-checkout-saved-cards { margin-bottom: 1rem; }
+.kb-checkout-section-label {
+    font-size: var(--kb-font-size-sm);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.kb-saved-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.kb-saved-card-option {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--kb-button-border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+}
+.kb-saved-card-option:hover { border-color: var(--kb-accent); }
+.kb-saved-card-option:has(input:checked) {
+    border-color: var(--kb-accent);
+    background: rgba(var(--kb-accent-rgb, 99,102,241), 0.05);
+}
+.kb-saved-card-option input[type="radio"] {
+    accent-color: var(--kb-accent);
+    width: 16px;
+    height: 16px;
+}
+.kb-saved-card-option-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--kb-font-size-sm);
+}
+.kb-saved-card-option-brand { font-weight: 600; }
+.kb-saved-card-option-number { font-family: monospace; }
+.kb-saved-card-option-expiry { color: var(--kb-secondary-font); }
+
+/* ── Checkout: Save checkboxes ── */
+.kb-checkout-save-option { margin: 0.75rem 0; }
+.kb-checkout-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--kb-font-size-sm);
+    cursor: pointer;
+}
+.kb-checkout-checkbox input[type="checkbox"] {
+    accent-color: var(--kb-accent);
+    width: 16px;
+    height: 16px;
+}
+
+/* ── Account empty state ── */
+.kb-account-empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--kb-secondary-font);
+}
+.kb-account-empty p { margin-top: 0.5rem; }
+
+/* ── Danger button ── */
+.kb-account-btn-danger {
+    background: var(--kb-red-500);
+    color: #fff;
+    border: none;
+}
+.kb-account-btn-danger:hover { background: var(--kb-red-700); }
+
+/* Product name - normal text styling */
+.kb-product-name {
+    color: inherit;
+    text-decoration: none;
+}
+
+.kb-product-card-link:hover .kb-product-name {
+    color: #EB7347; /* or your accent color */
+    text-decoration: none;
+}
+
+/* Price - normal text styling */
+.kb-product-new {
+    color: inherit;
+    text-decoration: none;
+}
+
+.kb-product-card-link:hover .kb-product-new {
+    color: #EB7347; /* or your accent color */
+    text-decoration: none;
+}

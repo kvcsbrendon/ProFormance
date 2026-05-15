@@ -1,0 +1,575 @@
+/* ============================= */
+/*    Wishlist & Reviews CSS     */
+/* ============================= */
+
+/* ---- Wishlist Heart on Product Cards ---- */
+.kb-wishlist-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--kb-white);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1.1rem;
+    color: var(--kb-secondary-font);
+    box-shadow: 0 2px 6px var(--kb-shadow-xs);
+}
+
+.kb-wishlist-heart:hover {
+    color: var(--kb-sale-red);
+    border-color: var(--kb-sale-red);
+    transform: scale(1.1);
+}
+
+.kb-wishlist-heart.kb-wishlisted {
+    color: var(--kb-sale-red);
+    border-color: var(--kb-sale-red);
+}
+
+/* Ensure product card media is positioned for the heart */
+.kb-product-card-media {
+    position: relative;
+}
+
+/* ---- Wishlist Button on Product Detail Page ---- */
+.kb-wishlist-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    background: var(--kb-white);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: var(--kb-font-size-sm);
+    font-family: var(--kb-font-family);
+    color: var(--kb-primary-font);
+    transition: all 0.2s;
+    margin-top: 0.75rem;
+}
+
+.kb-wishlist-btn:hover {
+    border-color: var(--kb-sale-red);
+    color: var(--kb-sale-red);
+}
+
+.kb-wishlist-btn.kb-wishlisted {
+    color: var(--kb-sale-red);
+    border-color: var(--kb-sale-red);
+    background: var(--kb-red-50);
+}
+
+.kb-wishlist-btn i {
+    font-size: 1.15rem;
+}
+
+/* ---- Rating Summary (product detail) ---- */
+.kb-product-rating-summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.kb-stars-display {
+    display: inline-flex;
+    gap: 0.1rem;
+    color: var(--kb-amber-500);
+    font-size: 1rem;
+}
+
+.kb-stars-sm {
+    font-size: 0.85rem;
+}
+
+.kb-rating-text {
+    font-size: var(--kb-font-size-sm);
+    color: var(--kb-secondary-font);
+}
+
+/* ---- Reviews Section ---- */
+.kb-reviews-section {
+    margin-top: 2.5rem;
+}
+
+.kb-reviews-title {
+    font-size: var(--kb-font-size-2xl-fluid);
+    font-weight: 700;
+    margin: 0 0 1.25rem;
+}
+
+/* Reviews Overview (avg + bars) */
+.kb-reviews-overview {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: var(--kb-primary-bg);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.kb-reviews-avg {
+    text-align: center;
+    min-width: 120px;
+}
+
+.kb-reviews-avg-num {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+.kb-reviews-count {
+    font-size: var(--kb-font-size-xsm);
+    color: var(--kb-secondary-font);
+    display: block;
+    margin-top: 0.25rem;
+}
+
+/* Rating Bars */
+.kb-reviews-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: center;
+}
+
+.kb-reviews-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.kb-reviews-bar-label {
+    width: 40px;
+    font-size: var(--kb-font-size-xsm);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    color: var(--kb-secondary-font);
+}
+
+.kb-reviews-bar-label i {
+    color: var(--kb-amber-500);
+    font-size: 0.7rem;
+}
+
+.kb-reviews-bar-track {
+    flex: 1;
+    height: 8px;
+    background: var(--kb-grey-200);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.kb-reviews-bar-fill {
+    height: 100%;
+    background: var(--kb-amber-500);
+    border-radius: 999px;
+    transition: width 0.3s;
+}
+
+.kb-reviews-bar-count {
+    width: 20px;
+    font-size: var(--kb-font-size-xsm);
+    color: var(--kb-secondary-font);
+    text-align: right;
+}
+
+/* ---- Star Rating Input (review form) ---- */
+.kb-star-rating-input {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.15rem;
+    justify-content: flex-end;
+}
+
+.kb-star-rating-input input {
+    display: none;
+}
+
+.kb-star-rating-input label {
+    cursor: pointer;
+    font-size: 1.75rem;
+    color: var(--kb-grey-300);
+    transition: color 0.15s;
+}
+
+.kb-star-rating-input label:hover,
+.kb-star-rating-input label:hover ~ label {
+    color: var(--kb-amber-500);
+}
+
+.kb-star-rating-input input:checked ~ label {
+    color: var(--kb-amber-500);
+}
+
+/* ---- Review Form Card ---- */
+.kb-review-form-card {
+    background: var(--kb-primary-bg);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.kb-review-form-card h3 {
+    font-size: var(--kb-font-size-lg);
+    font-weight: 600;
+    margin: 0 0 1rem;
+}
+
+.kb-review-already {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem;
+    background: var(--kb-green-50);
+    border: 1px solid var(--kb-green-200);
+    border-radius: 8px;
+    font-size: var(--kb-font-size-sm);
+    color: var(--kb-green-700);
+    margin-bottom: 1.5rem;
+}
+
+.kb-review-already a {
+    color: var(--kb-green-700);
+    font-weight: 600;
+}
+
+.kb-review-login-prompt {
+    padding: 1rem 1.25rem;
+    background: var(--kb-primary-bg);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 8px;
+    font-size: var(--kb-font-size-sm);
+    margin-bottom: 1.5rem;
+}
+
+.kb-review-login-prompt a {
+    font-weight: 600;
+    color: var(--kb-primary-font);
+    text-decoration: underline;
+}
+
+.kb-review-login-prompt a:hover {
+    text-decoration: underline;
+    color: var(--kb-secondary-font);
+}
+
+/* ---- Review Cards ---- */
+.kb-reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.kb-review-card {
+    background: var(--kb-primary-bg);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.kb-review-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.kb-review-card-user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.kb-review-card-user i {
+    font-size: 1.5rem;
+    color: var(--kb-secondary-font);
+}
+
+.kb-review-card-name {
+    font-weight: 600;
+    font-size: var(--kb-font-size-sm);
+}
+
+.kb-review-card-date {
+    font-size: var(--kb-font-size-xsm);
+    color: var(--kb-secondary-font);
+}
+
+.kb-review-card-title {
+    font-size: var(--kb-font-size-md);
+    font-weight: 600;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.kb-review-card-body {
+    font-size: var(--kb-font-size-sm);
+    color: var(--kb-primary-font);
+    line-height: 1.6;
+    margin: 0.25rem 0 0;
+    color: var(--kb-primary-font);
+}
+
+.kb-reviews-empty {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: var(--kb-primary-bg);
+    border: 1px dashed var(--kb-button-border);
+    border-radius: 12px;
+}
+
+.kb-reviews-empty i {
+    font-size: 3rem;
+    color: var(--kb-secondary-font);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.kb-reviews-empty p {
+    color: var(--kb-secondary-font);
+}
+
+/* ---- Wishlist Page ---- */
+.kb-wishlist-page {
+    padding: 2rem 3.75rem;
+    min-height: 60vh;
+}
+
+.kb-wishlist-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.kb-wishlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.kb-wishlist-title {
+    font-size: var(--kb-font-size-2xl-fluid);
+    font-weight: 700;
+    margin: 0;
+}
+
+.kb-wishlist-subtitle {
+    font-size: var(--kb-font-size-sm);
+    color: var(--kb-secondary-font);
+    margin: 0.25rem 0 0;
+}
+
+.kb-wishlist-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.kb-wishlist-share-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+    background: var(--kb-blue-50);
+    border: 1px solid var(--kb-blue-200);
+    border-radius: 8px;
+    font-size: var(--kb-font-size-xsm);
+    color: var(--kb-blue-800);
+    margin-bottom: 1.25rem;
+}
+
+/* Wishlist Grid */
+.kb-wishlist-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.kb-wishlist-item-card {
+    display: flex;
+    gap: 1.25rem;
+    background: var(--kb-primary-bg);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    position: relative;
+    transition: box-shadow 0.2s;
+}
+
+.kb-wishlist-item-card:hover {
+    box-shadow: 0 4px 12px var(--kb-box-shadow);
+}
+
+.kb-wishlist-item-image {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.kb-wishlist-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.kb-wishlist-item-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.kb-wishlist-item-name {
+    font-size: var(--kb-font-size-md);
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+}
+
+.kb-wishlist-item-name a {
+    color: var(--kb-primary-font);
+    text-decoration: none;
+}
+
+.kb-wishlist-item-name a:hover {
+    text-decoration: underline;
+}
+
+.kb-wishlist-item-brand {
+    font-size: var(--kb-font-size-sm);
+    color: var(--kb-secondary-font);
+    margin: 0 0 0.5rem;
+}
+
+.kb-wishlist-item-prices {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.kb-wishlist-item-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: auto;
+}
+
+.kb-wishlist-remove-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: var(--kb-white);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--kb-secondary-font);
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.kb-wishlist-remove-btn:hover {
+    color: var(--kb-sale-red);
+    border-color: var(--kb-sale-red);
+    background: var(--kb-red-50);
+}
+
+.kb-wishlist-item-date {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    font-size: var(--kb-font-size-xsm);
+    color: var(--kb-secondary-font);
+}
+
+.kb-wishlist-empty {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: var(--kb-primary-bg);
+    border: 1px dashed var(--kb-button-border);
+    border-radius: 12px;
+}
+
+.kb-wishlist-empty i {
+    font-size: 3rem;
+    color: var(--kb-secondary-font);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.kb-wishlist-empty p {
+    color: var(--kb-secondary-font);
+    margin-bottom: 1rem;
+}
+
+/* ---- Shared Form Elements ---- */
+.kb-form-group {
+    margin-bottom: 1rem;
+}
+
+.kb-form-label {
+    display: block;
+    font-size: var(--kb-font-size-sm);
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: var(--kb-primary-font);
+}
+
+.kb-form-optional {
+    font-weight: 400;
+    color: var(--kb-secondary-font);
+}
+
+.kb-form-input {
+    width: 100%;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid var(--kb-button-border);
+    border-radius: 8px;
+    font-size: var(--kb-font-size-sm);
+    font-family: var(--kb-font-family);
+    color: var(--kb-primary-font);
+    background: var(--kb-white);
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.kb-form-input:focus {
+    outline: none;
+    border-color: var(--kb-button-beige-border);
+    box-shadow: 0 0 0 3px var(--kb-beige-glow);
+}
+
+.kb-form-textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.kb-form-error {
+    color: var(--kb-sale-red);
+    font-size: var(--kb-font-size-xsm);
+    margin-top: 0.25rem;
+}
+
+/* ---- Responsive ---- */
+

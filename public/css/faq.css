@@ -1,0 +1,136 @@
+/* ===================================================================
+   Information & Legal Pages (Reusable Component)
+   =================================================================== */
+
+.info-section {
+    background-color: var(--kb-primary-bg);
+    padding: 3rem 1rem;
+    min-height: 80vh; 
+}
+
+.info-container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: var(--kb-font-family);
+}
+
+.info-heading {
+    color: var(--kb-primary-font);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: var(--kb-font-size-3xl);
+}
+
+.info-intro {
+    text-align: center;
+    color: var(--kb-secondary-font);
+    margin-bottom: 2rem;
+    font-size: var(--kb-font-size-md);
+}
+
+/* Search Bar */
+.search-wrapper {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.info-search-input {
+    width: 100%;
+    box-sizing: border-box; 
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--kb-button-border);
+    background-color: var(--kb-white);
+    color: var(--kb-primary-font);
+    font-family: var(--kb-font-family);
+    font-size: var(--kb-font-size-md);
+    transition: box-shadow 0.3s ease;
+}
+
+.info-search-input:focus {
+    outline: none;
+    border-color: var(--kb-accent);
+    box-shadow: 0 0 0 3px var(--kb-beige-glow);
+}
+
+/* Accordion Items */
+.info-accordion-item {
+    border-bottom: 1px solid var(--kb-header-line);
+    margin-bottom: 1rem;
+}
+
+.info-accordion-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    color: var(--kb-primary-font);
+    font-family: var(--kb-font-family);
+    font-size: var(--kb-font-size-lg);
+    font-weight: 600;
+    text-align: left;
+    transition: color 0.2s ease;
+}
+
+.info-accordion-button:hover {
+    color: var(--kb-accent);
+}
+
+.info-accordion-icon {
+    color: var(--kb-accent);
+    font-size: var(--kb-font-size-xl);
+    font-weight: bold;
+}
+
+.info-accordion-content {
+    display: none; 
+    padding-bottom: 1.5rem;
+    color: var(--kb-secondary-font);
+    font-size: var(--kb-font-size-md);
+    line-height: 1.6;
+}
+
+.info-no-results {
+    display: none; 
+    text-align: center;
+    color: var(--kb-sale-red);
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+/* Contact Us Prompt */
+.info-contact-prompt {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: var(--kb-secondary-bg);
+    border-radius: 8px;
+    box-shadow: var(--kb-shadow-sm);
+}
+
+.info-contact-prompt p {
+    color: var(--kb-primary-font);
+    margin-bottom: 1.5rem;
+    font-size: var(--kb-font-size-md);
+}
+
+.btn-contact {
+    display: inline-block;
+    background-color: var(--kb-button-beige);
+    color: var(--kb-primary-font);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid var(--kb-button-beige-border);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: var(--kb-button-beige-hover);
+    color: var(--kb-white);
+}

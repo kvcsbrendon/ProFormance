@@ -1,0 +1,58 @@
+/**
+ * VISUAL STYLES: Defines the look and motion of UI alerts.
+ * This stylesheet handles fixed positioning, color-coded themes (success, 
+ * error, info), and depth through shadows. It also contains the keyframe 
+ * animations that govern how notifications slide smoothly onto the screen 
+ * and fade out during removal.
+ */
+
+/* Common Base for both */
+.kb-toast, .kb-cart-notification {
+    position: fixed;
+    right: 20px;
+    color: white;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    animation: kbSlideIn 0.3s ease forwards;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Toast Specifics (Top) */
+.kb-toast {
+    top: 20px;
+    padding: 12px 20px;
+    border-radius: 6px;
+}
+.kb-toast-success { background: #10b981; }
+.kb-toast-error   { background: #ef4444; }
+.kb-toast-info    { background: #3b82f6; }
+
+/* Notification Specifics (Bottom) */
+.kb-cart-notification {
+    bottom: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+.kb-cart-notification.success { background: #10b981; }
+.kb-cart-notification.error   { background: #ef4444; }
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Shared Animations */
+.kb-exit {
+    animation: kbSlideOut 0.3s ease forwards !important;
+}
+
+@keyframes kbSlideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes kbSlideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}

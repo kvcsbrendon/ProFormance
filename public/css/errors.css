@@ -1,0 +1,80 @@
+/* ===================================================================
+   Error Pages CSS
+   =================================================================== */
+
+.kb-error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 60vh;
+    padding: 3rem 1.5rem;
+}
+.kb-error-icon {
+    font-size: 3.5rem;
+    color: var(--kb-accent);
+    margin-bottom: 1rem;
+}
+.kb-error-code {
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--kb-primary-font);
+    line-height: 1;
+    margin: 0;
+}
+.kb-error-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--kb-primary-font);
+    margin: 0.5rem 0;
+}
+.kb-error-message {
+    font-size: var(--kb-font-size-md);
+    color: var(--kb-secondary-font);
+    max-width: 420px;
+    margin: 0.5rem 0 1.5rem;
+}
+.kb-error-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.kb-error-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1.5rem;
+    background: var(--kb-accent);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: var(--kb-font-size-sm);
+    text-decoration: none;
+    transition: background 0.15s;
+}
+.kb-error-btn-primary:hover { background: var(--kb-accent-hover); }
+.kb-error-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1.5rem;
+    background: transparent;
+    color: var(--kb-primary-font);
+    border: 1px solid var(--kb-button-border);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: var(--kb-font-size-sm);
+    text-decoration: none;
+    transition: border-color 0.15s;
+}
+.kb-error-btn-outline:hover { border-color: var(--kb-accent); color: var(--kb-accent); }
+
+/* ── Product / Wishlist specific 404 extras ── */
+.kb-error-subtitle {
+    font-size: var(--kb-font-size-sm);
+    color: var(--kb-secondary-font);
+    margin-top: -0.25rem;
+    margin-bottom: 1rem;
+}
